@@ -1,0 +1,16 @@
+{
+	"name": "ls_dev_http_balldontlieapi",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://api.balldontlie.io/v1/",
+			"authenticationType": "Anonymous",
+			"authHeaders": {
+				"Authorization": "d74e2e4a-60af-4a9c-9f53-2265e07415c0"
+			},
+			"enableServerCertificateValidation": true
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"name": "ds_dev_teams",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dev_http_balldontlieapi",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "teams",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

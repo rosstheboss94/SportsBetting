@@ -1,0 +1,28 @@
+{
+	"name": "ds_dev_games",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dev_http_balldontlieapi",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"GameDate": {
+				"type": "String",
+				"defaultValue": "2024-11-20"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@concat('games?dates[]=',dataset().GameDate,'&per_page=100')",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
